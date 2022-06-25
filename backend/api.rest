@@ -1,0 +1,31 @@
+GET http://127.0.0.1:5000/questions?page=1 HTTP/1.1
+
+###
+GET http://127.0.0.1:5000/categories HTTP/1.1
+
+###
+GET http://127.0.0.1:5000/categories/1/questions HTTP/1.1
+
+###
+DELETE http://127.0.0.1:5000/questions/9 HTTP/1.1
+
+###
+POST http://127.0.0.1:5000/quizzes HTTP/1.1
+content-type: application/json
+
+{
+  "previous_questions": [],
+  "quiz_category": {"type": "Science", "id": "1"}
+}
+
+###
+POST http://127.0.0.1:5000/questions HTTP/1.1
+content-type: application/json
+
+{"question":"What is Abiola Adeosun brother's name?","answer":"Mayowa Adeosun","difficulty":"3","category":"4"}
+
+###
+POST http://127.0.0.1:5000/questions HTTP/1.1
+content-type: application/json
+
+{"searchTerm":"author"}
